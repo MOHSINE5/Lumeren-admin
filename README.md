@@ -2,7 +2,6 @@
 
 This is the **administrative web application** for managing an optician business. This application is part of a two-component solution:
 
-1. **Marketing Website** - A modern, professional website showcasing optician services *(separate repository)*
 2. **Web Application** - This repository - A complete management system for running an optician business
 
 > **Note:** The marketing website and web application are maintained in **separate repositories** and deployed independently.
@@ -26,22 +25,6 @@ Lumeren-admin/                   # Admin web application (PHP)
 
 ---
 
-## 🌐 Marketing Website (Separate Repository)
-
-The marketing website is maintained in a **separate repository** and includes:
-
-### Features:
-- Responsive design with smooth animations
-- Service showcase (Eye Exams, Glasses, Contacts, Repairs, etc.)
-- Product gallery
-- About section with statistics
-- Contact information
-- Modern, professional aesthetic with custom typography
-
-### Repository:
-The marketing website is a standalone HTML/React application that can be deployed to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
-
----
 
 ## 💼 Web Application (Admin Portal)
 
@@ -122,7 +105,7 @@ CREATE DATABASE optician_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 2. Update database credentials in `config.php` if needed:
 ```php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'optician_db');
+define('DB_NAME', 'lumeren_db');
 define('DB_USER', 'root');        // Change if needed
 define('DB_PASS', '');            // Change if needed
 ```
@@ -138,8 +121,7 @@ chmod 644 Lumeren-admin/*.php
 1. Open your web browser
 2. Navigate to: `http://localhost/Lumeren-admin/`
 3. Login with default credentials:
-   - **Username:** admin
-   - **Password:** admin123
+
 
 ### Step 5: Initial Setup
 
