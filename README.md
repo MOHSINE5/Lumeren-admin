@@ -1,31 +1,34 @@
-# Lumeren Optician - Complete Solution
+# Lumeren Optician - Web Application
 
-This package includes two separate applications:
+This is the **administrative web application** for managing an optician business. This application is part of a two-component solution:
 
-1. **Marketing Website** - A modern, professional website showcasing optician services
-2. **Web Application** - A complete management system for running an optician business
+1. **Marketing Website** - A modern, professional website showcasing optician services *(separate repository)*
+2. **Web Application** - This repository - A complete management system for running an optician business
+
+> **Note:** The marketing website and web application are maintained in **separate repositories** and deployed independently.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-├── optician-website.html        # Marketing website (React-based)
-└── optician-webapp/             # Admin web application (PHP)
-    ├── index.php                # Login page
-    ├── config.php               # Database configuration & initialization
-    ├── dashboard.php            # Main dashboard
-    ├── customers.php            # Customer management
-    ├── appointments.php         # Appointment scheduling
-    ├── prescriptions.php        # Prescription records
-    ├── products.php             # Product inventory
-    ├── sales.php                # Sales tracking
-    └── logout.php               # Logout functionality
+Lumeren-admin/                   # Admin web application (PHP)
+├── index.php                    # Login page
+├── config.php                   # Database configuration & initialization
+├── dashboard.php                # Main dashboard
+├── customers.php                # Customer management
+├── appointments.php             # Appointment scheduling
+├── prescriptions.php            # Prescription records
+├── products.php                 # Product inventory
+├── sales.php                    # Sales tracking
+└── logout.php                   # Logout functionality
 ```
 
 ---
 
-## 🌐 Marketing Website
+## 🌐 Marketing Website (Separate Repository)
+
+The marketing website is maintained in a **separate repository** and includes:
 
 ### Features:
 - Responsive design with smooth animations
@@ -35,16 +38,8 @@ This package includes two separate applications:
 - Contact information
 - Modern, professional aesthetic with custom typography
 
-### Setup:
-1. Simply open `optician-website.html` in any web browser
-2. Or upload to any web hosting service
-3. No server-side requirements - pure client-side application
-
-### Customization:
-- Update company name, colors in the CSS `:root` variables
-- Modify services and products arrays in the React component
-- Change contact information in the contact section
-- Replace emoji icons with actual images if desired
+### Repository:
+The marketing website is a standalone HTML/React application that can be deployed to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
 
 ---
 
@@ -119,9 +114,10 @@ CREATE DATABASE optician_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ### Step 3: Application Installation
 
-1. Copy the `optician-webapp` folder to your web server directory:
-   - XAMPP: `C:\xampp\htdocs\optician-webapp\`
-   - Linux: `/var/www/html/optician-webapp/`
+1. Clone or download this repository to your web server directory:
+   - XAMPP: `C:\xampp\htdocs\Lumeren-admin\`
+   - LAMP/Linux: `/var/www/html/Lumeren-admin/`
+   - Laragon: `C:\laragon\www\Lumeren-admin\`
 
 2. Update database credentials in `config.php` if needed:
 ```php
@@ -133,14 +129,14 @@ define('DB_PASS', '');            // Change if needed
 
 3. Set proper file permissions (Linux/Mac):
 ```bash
-chmod 755 optician-webapp
-chmod 644 optician-webapp/*.php
+chmod 755 Lumeren-admin
+chmod 644 Lumeren-admin/*.php
 ```
 
 ### Step 4: Access the Application
 
 1. Open your web browser
-2. Navigate to: `http://localhost/optician-webapp/`
+2. Navigate to: `http://localhost/Lumeren-admin/`
 3. Login with default credentials:
    - **Username:** admin
    - **Password:** admin123
@@ -328,23 +324,61 @@ For issues or questions:
 
 ---
 
+## 🚢 Deployment
+
+### Web Application (This Repository)
+
+This PHP application requires a server with PHP and MySQL support:
+
+**Recommended Hosting Options:**
+- Traditional shared hosting (cPanel, Plesk)
+- VPS with LAMP/LEMP stack
+- Cloud platforms (AWS, DigitalOcean, Linode)
+
+**Deployment Steps:**
+1. Upload all files to your web server
+2. Import or auto-initialize the database
+3. Update `config.php` with production database credentials
+4. Change default login credentials
+5. Enable HTTPS with SSL certificate
+6. Set up automated backups
+
+### Marketing Website (Separate Repository)
+
+The marketing website is a static HTML/React application deployed separately:
+
+**Recommended Hosting Options:**
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting service
+
+---
+
 ## ✅ Checklist for Deployment
 
 - [ ] Install web server (Apache/Nginx)
 - [ ] Install PHP 8.0+
 - [ ] Install MySQL 5.7+
-- [ ] Copy files to web directory
-- [ ] Update database credentials
+- [ ] Clone/upload repository files to web directory
+- [ ] Update database credentials in `config.php`
 - [ ] Change default login credentials
 - [ ] Test all functionality
-- [ ] Enable HTTPS
-- [ ] Set up backups
-- [ ] Configure firewall
+- [ ] Enable HTTPS with SSL certificate
+- [ ] Set up automated database backups
+- [ ] Configure firewall rules
 - [ ] Test on target browsers
+- [ ] Deploy marketing website separately (if applicable)
 
 ---
 
-**Built with:** PHP 8, MySQL, Bootstrap 5, HTML5, CSS3, JavaScript, React
+## 📦 Repository Information
+
+**Repository:** Lumeren-admin (Web Application)
+
+**Related Repository:** Lumeren-website (Marketing Website - separate)
+
+**Built with:** PHP 8, MySQL, Bootstrap 5, HTML5, CSS3, JavaScript
 
 **Version:** 1.0.0
 
